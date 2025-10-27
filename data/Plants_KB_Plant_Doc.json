@@ -1,0 +1,1055 @@
+[
+{
+  "Aloe Vera (Aloe barbadensis miller)": {
+    "Overwatering": {
+      "symptoms": ["soft mushy leaves", "brown base rot", "foul smell from soil"],
+      "treatment": ["trim rotten roots", "repot in cactus soil", "let soil dry fully before watering"],
+      "prevention": ["use sandy well-draining mix", "water sparingly once soil is fully dry"]
+    },
+    "Underwatering": {
+      "symptoms": ["thin curling leaves", "dry leaf tips"],
+      "treatment": ["water deeply and consistently"],
+      "prevention": ["check leaves regularly for firmness"]
+    },
+    "Sunburn": {
+      "symptoms": ["brown crispy patches", "bleached spots"],
+      "treatment": ["move to indirect bright light", "remove damaged leaves"],
+      "prevention": ["avoid harsh afternoon sun exposure"]
+    },
+    "Pests (Mealybugs/Aphids/Scale)": {
+      "symptoms": ["white fluff on leaves", "sticky residue", "small bumps on stems"],
+      "treatment": ["wipe with alcohol", "apply neem oil"],
+      "prevention": ["inspect leaves regularly"]
+    },
+    "Fungal Infections": {
+      "symptoms": ["black leaf spots", "softening tissues"],
+      "treatment": ["apply fungicide", "remove infected parts"],
+      "prevention": ["avoid overhead watering"]
+    }
+  },
+  "Jade Plant (Crassula ovata)": {
+    "Overwatering": {
+      "symptoms": ["yellow soft leaves", "leaf drop", "root rot"],
+      "treatment": ["repot with cactus soil", "prune rotten roots"],
+      "prevention": ["let soil dry fully between waterings"]
+    },
+    "Underwatering": {
+      "symptoms": ["wrinkled shriveled leaves", "slow growth"],
+      "treatment": ["increase watering frequency"],
+      "prevention": ["water deeply but infrequently"]
+    },
+    "Sunburn": {
+      "symptoms": ["brown or red patches", "scorched leaves"],
+      "treatment": ["move to indirect light", "remove damaged leaves"],
+      "prevention": ["acclimate plant gradually to full sun"]
+    },
+    "Pests (Mealybugs/Spider Mites/Aphids)": {
+      "symptoms": ["white cottony spots", "sticky honeydew", "tiny webs"],
+      "treatment": ["wipe with neem oil or alcohol", "rinse plant"],
+      "prevention": ["regular inspections"]
+    },
+    "Nutrient Deficiency": {
+      "symptoms": ["pale leaves", "slow growth"],
+      "treatment": ["apply balanced cactus fertilizer"],
+      "prevention": ["fertilize once a month during growth season"]
+    }
+  },
+  "Snake Plant (Sansevieria trifasciata / Dracaena trifasciata)": {
+    "Overwatering": {
+      "symptoms": ["mushy base", "yellow leaves", "foul smell from soil"],
+      "treatment": ["remove damaged parts", "repot with dry sandy soil"],
+      "prevention": ["water only when soil is fully dry"]
+    },
+    "Underwatering": {
+      "symptoms": ["wrinkled leaves", "dry brittle tips"],
+      "treatment": ["water more frequently"],
+      "prevention": ["check soil every 2 weeks"]
+    },
+    "Low Light Stress": {
+      "symptoms": ["slowed growth", "leaves bending"],
+      "treatment": ["move to brighter indirect light"],
+      "prevention": ["provide medium to bright filtered light"]
+    },
+    "Pests (Mealybugs/Thrips)": {
+      "symptoms": ["tiny insects", "silver streaks on leaves"],
+      "treatment": ["wipe with alcohol", "apply neem oil"],
+      "prevention": ["clean leaves occasionally"]
+    },
+    "Leaf Scarring": {
+      "symptoms": ["brown scars", "dry patches"],
+      "treatment": ["remove damaged leaves"],
+      "prevention": ["avoid rough handling and cold drafts"]
+    }
+  },
+  "Zebra Haworthia (Haworthiopsis attenuata)": {
+    "Overwatering": {
+      "symptoms": ["mushy translucent leaves", "root rot"],
+      "treatment": ["stop watering", "repot with dry cactus mix"],
+      "prevention": ["water sparingly, allow full drying"]
+    },
+    "Underwatering": {
+      "symptoms": ["shriveling leaves", "dry brown tips"],
+      "treatment": ["increase watering slowly"],
+      "prevention": ["water lightly once soil is fully dry"]
+    },
+    "Sunburn": {
+      "symptoms": ["bleached leaves", "brown crispy spots"],
+      "treatment": ["move to filtered sunlight"],
+      "prevention": ["avoid direct harsh sun"]
+    },
+    "Pests (Mealybugs/Scale)": {
+      "symptoms": ["white cotton patches", "small bumps"],
+      "treatment": ["wipe with neem oil", "spray insecticidal soap"],
+      "prevention": ["inspect leaves often"]
+    },
+    "Etiolation (Low Light)": {
+      "symptoms": ["elongated thin leaves", "loss of compact rosette shape"],
+      "treatment": ["move to brighter light"],
+      "prevention": ["place near bright indirect light"]
+    }
+  },
+  "Panda Plant (Kalanchoe tomentosa)": {
+    "Overwatering": {
+      "symptoms": ["mushy stems", "black roots", "leaf drop"],
+      "treatment": ["cut rotten roots", "repot with cactus soil"],
+      "prevention": ["water sparingly when soil dries"]
+    },
+    "Underwatering": {
+      "symptoms": ["wrinkled furry leaves", "slow growth"],
+      "treatment": ["water moderately"],
+      "prevention": ["regular but minimal watering"]
+    },
+    "Sunburn": {
+      "symptoms": ["brown leaf spots", "dry tips"],
+      "treatment": ["move to shaded bright light"],
+      "prevention": ["avoid direct strong sun"]
+    },
+    "Pests (Mealybugs/Aphids)": {
+      "symptoms": ["white cottony clusters", "sticky residue"],
+      "treatment": ["dab with alcohol", "apply neem oil"],
+      "prevention": ["inspect plant regularly"]
+    },
+    "Nutrient Deficiency": {
+      "symptoms": ["faded leaf color", "stunted growth"],
+      "treatment": ["apply diluted cactus fertilizer"],
+      "prevention": ["fertilize during growing season"]
+    }
+  }
+},
+{
+  "Crown of Thorns (Euphorbia milii)": {
+    "Yellowing leaves": {
+      "symptoms": ["leaves turning yellow", "soft texture", "dropping prematurely"],
+      "treatment": ["allow soil to dry between watering", "repot in well-draining cactus mix"],
+      "prevention": ["use sandy soil with good drainage", "avoid excessive watering"]
+    },
+    "Drooping or wilting": {
+      "symptoms": ["stems and leaves look limp", "entire plant sags"],
+      "treatment": ["water thoroughly when soil is dry", "move away from cold drafts"],
+      "prevention": ["maintain stable warm temperature", "follow consistent watering schedule"]
+    },
+    "No blooms": {
+      "symptoms": ["healthy plant but no flowers"],
+      "treatment": ["place in bright direct sunlight", "apply balanced fertilizer monthly"],
+      "prevention": ["ensure 4–6 hours of sun", "avoid excess nitrogen fertilizer"]
+    },
+    "Pest infestation": {
+      "symptoms": ["white cottony patches", "tiny webbing", "sticky residue"],
+      "treatment": ["wipe leaves with alcohol-soaked cotton", "apply neem oil or insecticidal soap"],
+      "prevention": ["inspect regularly", "keep plant in well-ventilated spot"]
+    },
+    "Leaf drop": {
+      "symptoms": ["leaves falling suddenly", "bare stems"],
+      "treatment": ["keep plant in stable warm spot", "reduce watering in winter"],
+      "prevention": ["avoid sudden environmental changes", "protect from cold exposure"]
+    }
+  },
+
+  "Bunny Ear Cactus (Opuntia microdasys)": {
+    "Shriveled pads": {
+      "symptoms": ["pads look wrinkled", "shrinking appearance"],
+      "treatment": ["water when soil is completely dry", "keep above 50°F (10°C)"],
+      "prevention": ["follow dry-period watering schedule", "protect from frost and drafts"]
+    },
+    "Rotting pads": {
+      "symptoms": ["black mushy areas", "pads collapsing"],
+      "treatment": ["cut off affected parts", "repot in gritty cactus soil"],
+      "prevention": ["avoid overwatering", "withhold water in winter dormancy"]
+    },
+    "Sunburn": {
+      "symptoms": ["brown patches on pads", "bleached spots"],
+      "treatment": ["move to partial shade", "trim damaged pads if necessary"],
+      "prevention": ["acclimate gradually to full sun", "shade during midday heat"]
+    },
+    "Pests": {
+      "symptoms": ["cotton-like clusters", "scaly bumps"],
+      "treatment": ["dab with alcohol cotton swab", "apply neem oil spray"],
+      "prevention": ["inspect pads regularly", "keep airflow around plant"]
+    },
+    "Root rot": {
+      "symptoms": ["base of plant mushy", "bad odor"],
+      "treatment": ["repot into terracotta pot", "remove rotted roots"],
+      "prevention": ["ensure drainage holes are clear", "use sandy gritty soil mix"]
+    }
+  },
+
+  "Golden Barrel Cactus (Echinocactus grusonii)": {
+    "Soft or mushy stem": {
+      "symptoms": ["stem feels soft to touch", "brown/black areas"],
+      "treatment": ["let soil dry completely", "apply fungicide if infection spreads"],
+      "prevention": ["water sparingly", "keep cactus in well-ventilated dry spot"]
+    },
+    "Yellowing": {
+      "symptoms": ["stem turning pale yellow", "growth slowed"],
+      "treatment": ["move to bright indirect light", "fertilize with cactus mix"],
+      "prevention": ["avoid harsh midday sunlight", "feed monthly during growing season"]
+    },
+    "Stunted growth": {
+      "symptoms": ["no visible growth over years", "crowded roots"],
+      "treatment": ["repot every 3–4 years", "place in bright light"],
+      "prevention": ["choose appropriately sized pot", "provide 6+ hours of sunlight"]
+    },
+    "Brown spots": {
+      "symptoms": ["round brown lesions", "hardened areas"],
+      "treatment": ["remove damaged tissue", "improve air circulation"],
+      "prevention": ["avoid water on cactus body", "do not overcrowd with other plants"]
+    },
+    "Pests": {
+      "symptoms": ["tiny insects", "white cotton spots"],
+      "treatment": ["wipe with alcohol", "apply systemic insecticide"],
+      "prevention": ["keep cactus isolated when new", "inspect monthly"]
+    }
+  },
+
+  "Christmas Cactus (Schlumbergera truncata)": {
+    "Dropping buds": {
+      "symptoms": ["flower buds fall before opening"],
+      "treatment": ["water when topsoil feels dry", "keep in stable light and temperature"],
+      "prevention": ["avoid sudden environmental shifts", "do not move plant during budding"]
+    },
+    "No flowers": {
+      "symptoms": ["green growth but no blooms"],
+      "treatment": ["provide 12–14 hours of darkness for 6 weeks", "use bloom fertilizer"],
+      "prevention": ["give bright indirect light", "maintain light-dark cycle before holidays"]
+    },
+    "Wilted stems": {
+      "symptoms": ["flat or limp stems", "soil soggy"],
+      "treatment": ["repot into draining cactus mix", "reduce watering"],
+      "prevention": ["avoid constant wetness", "use breathable pot with drainage"]
+    },
+    "Red or purple leaves": {
+      "symptoms": ["leaves turn reddish or purple at edges"],
+      "treatment": ["move plant away from strong sun", "feed balanced fertilizer"],
+      "prevention": ["keep under filtered light", "monitor nutrients regularly"]
+    },
+    "Pests": {
+      "symptoms": ["white fuzz (mealybugs)", "sticky honeydew (aphids)"],
+      "treatment": ["wash with insecticidal soap", "dab pests with alcohol"],
+      "prevention": ["quarantine new plants", "check leaves weekly"]
+    }
+  },
+
+  "Ponytail Palm (Beaucarnea recurvata)": {
+    "Brown leaf tips": {
+      "symptoms": ["crispy brown edges", "dry tips"],
+      "treatment": ["trim damaged tips", "mist occasionally"],
+      "prevention": ["increase humidity indoors", "water deeply but infrequently"]
+    },
+    "Soft bulb (caudex)": {
+      "symptoms": ["base feels squishy", "yellowing leaves"],
+      "treatment": ["stop watering immediately", "repot and cut away rot"],
+      "prevention": ["ensure pot has drainage holes", "avoid water sitting at base"]
+    },
+    "Yellowing leaves": {
+      "symptoms": ["leaves gradually turn yellow"],
+      "treatment": ["remove yellow leaves", "repot in sandy mix"],
+      "prevention": ["allow soil to dry completely", "avoid frequent watering"]
+    },
+    "Slow growth": {
+      "symptoms": ["minimal leaf production", "small size"],
+      "treatment": ["place in bright indirect sunlight", "fertilize in spring and summer"],
+      "prevention": ["use nutrient-rich soil", "rotate plant for even sun"]
+    },
+    "Pests": {
+      "symptoms": ["fine webbing (spider mites)", "white cotton clusters (mealybugs)"],
+      "treatment": ["spray neem oil weekly", "wipe leaves with alcohol"],
+      "prevention": ["keep humidity higher", "inspect leaves regularly"]
+    }
+  }
+},
+{
+  "Areca Palm (Dypsis lutescens)": {
+    "Yellowing fronds": {
+      "symptoms": ["fronds turning yellow from tips", "older leaves dying early"],
+      "treatment": ["trim dead fronds", "ensure bright indirect light", "fertilize during growing season"],
+      "prevention": ["avoid overwatering", "use well-draining palm soil"]
+    },
+    "Brown leaf tips": {
+      "symptoms": ["tips of fronds turning brown and crispy"],
+      "treatment": ["increase humidity with pebble tray", "mist leaves occasionally"],
+      "prevention": ["maintain 50–60% humidity", "avoid fluoride-heavy tap water"]
+    },
+    "Root rot": {
+      "symptoms": ["soft mushy roots", "foul smell from soil"],
+      "treatment": ["remove plant from pot", "cut away rotten roots", "repot in fresh mix"],
+      "prevention": ["never let soil stay soggy", "ensure pot has drainage holes"]
+    },
+    "Pests": {
+      "symptoms": ["yellow stippling (spider mites)", "sticky residue (scale insects)", "cottony clusters (mealybugs)"],
+      "treatment": ["wipe fronds with insecticidal soap", "spray neem oil weekly"],
+      "prevention": ["inspect underside of fronds", "keep air circulation good"]
+    }
+  },
+
+  "Parlor Palm (Chamaedorea elegans)": {
+    "Yellowing leaves": {
+      "symptoms": ["entire frond turns yellow", "slow decline"],
+      "treatment": ["reduce watering frequency", "place in low-medium indirect light"],
+      "prevention": ["use loose potting soil", "avoid waterlogging"]
+    },
+    "Brown leaf tips": {
+      "symptoms": ["crispy brown ends on fronds"],
+      "treatment": ["trim tips with clean scissors", "increase indoor humidity"],
+      "prevention": ["mist regularly", "use filtered water if tap water has salts"]
+    },
+    "Pests": {
+      "symptoms": ["tiny webs (spider mites)", "brown scales on fronds"],
+      "treatment": ["apply horticultural oil", "wipe with neem solution"],
+      "prevention": ["quarantine new plants", "keep dust off fronds"]
+    },
+    "Slow growth": {
+      "symptoms": ["plant remains small", "thin fronds"],
+      "treatment": ["fertilize with balanced palm fertilizer", "place in bright but indirect light"],
+      "prevention": ["repot every 2–3 years", "provide consistent warmth"]
+    }
+  },
+
+  "Lady Palm (Rhapis excelsa)": {
+    "Brown leaf tips": {
+      "symptoms": ["fronds edges turning brown and crispy"],
+      "treatment": ["trim tips neatly", "mist plant occasionally"],
+      "prevention": ["maintain high humidity", "water with distilled or rainwater"]
+    },
+    "Yellowing fronds": {
+      "symptoms": ["yellowing leaves, especially lower fronds"],
+      "treatment": ["remove affected fronds", "improve drainage and lighting"],
+      "prevention": ["do not overwater", "keep plant in bright filtered light"]
+    },
+    "Root rot": {
+      "symptoms": ["plant base mushy", "fronds collapse suddenly"],
+      "treatment": ["cut away rotten roots", "repot in gritty well-draining mix"],
+      "prevention": ["let soil dry before watering again", "use pot with drainage holes"]
+    },
+    "Pests": {
+      "symptoms": ["tiny bumps (scale)", "webbing (spider mites)"],
+      "treatment": ["wipe fronds with insecticidal soap", "apply neem oil spray"],
+      "prevention": ["clean leaves regularly", "inspect new plants before placing nearby"]
+    }
+  },
+
+  "Kentia Palm (Howea forsteriana)": {
+    "Leaf spotting": {
+      "symptoms": ["brown spots on fronds", "patchy discoloration"],
+      "treatment": ["remove spotted fronds", "improve air circulation"],
+      "prevention": ["avoid water on leaves", "maintain airflow indoors"]
+    },
+    "Yellowing fronds": {
+      "symptoms": ["lower leaves turning yellow"],
+      "treatment": ["trim old fronds", "apply palm fertilizer with magnesium"],
+      "prevention": ["fertilize every 2–3 months", "use balanced nutrient soil"]
+    },
+    "Root rot": {
+      "symptoms": ["collapsed fronds", "soft base"],
+      "treatment": ["repot into sandy well-draining mix", "reduce watering drastically"],
+      "prevention": ["keep in slightly dry soil", "avoid standing water in pot"]
+    },
+    "Pests": {
+      "symptoms": ["scale insects on stems", "fine webs from mites"],
+      "treatment": ["treat with neem oil or systemic insecticide"],
+      "prevention": ["wipe fronds monthly", "quarantine new plants"]
+    }
+  },
+
+  "Sago Palm (Cycas revoluta)": {
+    "Yellowing leaves": {
+      "symptoms": ["older fronds turn yellow"],
+      "treatment": ["apply iron or magnesium supplement", "trim yellow fronds"],
+      "prevention": ["fertilize with palm-specific nutrients", "use well-draining soil"]
+    },
+    "Root or crown rot": {
+      "symptoms": ["brown mushy crown", "foul odor"],
+      "treatment": ["remove affected parts", "apply fungicide drench"],
+      "prevention": ["avoid excess watering", "keep crown above soil line"]
+    },
+    "Scale infestation": {
+      "symptoms": ["white or brown bumps on fronds", "sticky residue"],
+      "treatment": ["apply horticultural oil", "wipe leaves with alcohol"],
+      "prevention": ["inspect leaves regularly", "maintain airflow"]
+    },
+    "Leaf burn": {
+      "symptoms": ["fronds with scorched edges", "brown tips"],
+      "treatment": ["move to partial shade", "mist lightly in dry seasons"],
+      "prevention": ["avoid direct harsh sunlight", "keep moderate humidity"]
+    }
+  }
+},
+{
+  "Money Plant / Golden Pothos (Epipremnum aureum)": {
+    "Yellowing leaves": {
+      "symptoms": ["older leaves turn yellow", "leaf drop"],
+      "treatment": ["let soil dry before watering", "repot if roots are soggy"],
+      "prevention": ["water only when topsoil is dry", "use well-draining soil"]
+    },
+    "Leggy growth": {
+      "symptoms": ["long stems with few leaves", "thin weak vines"],
+      "treatment": ["prune back stems", "place in brighter indirect light"],
+      "prevention": ["rotate plant for even growth", "fertilize monthly in growing season"]
+    },
+    "Root rot": {
+      "symptoms": ["black mushy roots", "foul smell from soil"],
+      "treatment": ["cut rotten roots", "repot into fresh mix"],
+      "prevention": ["ensure drainage holes", "avoid waterlogging"]
+    },
+    "Pests": {
+      "symptoms": ["sticky residue", "tiny white insects (mealybugs)", "yellow stippling from mites"],
+      "treatment": ["wipe with neem oil solution", "spray insecticidal soap"],
+      "prevention": ["inspect leaves regularly", "keep humidity balanced"]
+    }
+  },
+
+  "Philodendron (Philodendron hederaceum)": {
+    "Yellowing leaves": {
+      "symptoms": ["older leaves yellow and fall", "slow growth"],
+      "treatment": ["reduce watering", "place in bright filtered light"],
+      "prevention": ["use light, well-draining soil", "water when topsoil is dry"]
+    },
+    "Brown leaf tips": {
+      "symptoms": ["edges and tips turning brown"],
+      "treatment": ["increase humidity", "trim affected tips"],
+      "prevention": ["avoid dry drafts", "mist plant regularly"]
+    },
+    "Leggy stems": {
+      "symptoms": ["long bare vines", "small sparse leaves"],
+      "treatment": ["prune to encourage bushy growth", "move to brighter indirect light"],
+      "prevention": ["rotate plant weekly", "provide climbing support"]
+    },
+    "Pests": {
+      "symptoms": ["tiny webs (spider mites)", "white fuzz (mealybugs)"],
+      "treatment": ["wipe leaves with neem oil", "apply insecticidal spray"],
+      "prevention": ["check undersides of leaves often", "quarantine new plants"]
+    }
+  },
+
+  "Monstera / Swiss Cheese Plant (Monstera deliciosa)": {
+    "Yellow leaves": {
+      "symptoms": ["large leaves turning yellow", "drooping"],
+      "treatment": ["adjust watering schedule", "improve soil drainage"],
+      "prevention": ["use airy mix with perlite", "water only when soil dries halfway"]
+    },
+    "Brown leaf edges": {
+      "symptoms": ["crispy brown patches on leaves"],
+      "treatment": ["trim damaged leaves", "raise humidity"],
+      "prevention": ["mist regularly", "avoid direct sunlight"]
+    },
+    "No fenestrations (holes)": {
+      "symptoms": ["new leaves are solid without splits"],
+      "treatment": ["move to brighter light", "feed balanced fertilizer"],
+      "prevention": ["give at least 6 hours of indirect light", "stake plant for vertical growth"]
+    },
+    "Root rot": {
+      "symptoms": ["stem base black and mushy", "bad odor"],
+      "treatment": ["cut affected roots", "repot into chunky mix"],
+      "prevention": ["avoid soggy soil", "ensure pot drains well"]
+    },
+    "Pests": {
+      "symptoms": ["scale, mealybugs, or mites present"],
+      "treatment": ["wipe with alcohol cotton ball", "spray neem oil"],
+      "prevention": ["inspect large leaves regularly", "keep leaves dust-free"]
+    }
+  },
+
+  "Dumb Cane (Dieffenbachia seguine)": {
+    "Yellowing lower leaves": {
+      "symptoms": ["older leaves yellow and drop off"],
+      "treatment": ["improve light exposure", "adjust watering"],
+      "prevention": ["provide bright filtered light", "water moderately"]
+    },
+    "Brown leaf edges": {
+      "symptoms": ["burned leaf margins", "crispy tips"],
+      "treatment": ["mist plant regularly", "trim brown tips"],
+      "prevention": ["avoid low humidity", "keep away from heaters/AC"]
+    },
+    "Stem rot": {
+      "symptoms": ["soft stems at base", "collapse of plant"],
+      "treatment": ["cut stem above rot", "propagate healthy top"],
+      "prevention": ["avoid overwatering", "use breathable soil mix"]
+    },
+    "Pests": {
+      "symptoms": ["sticky residue", "white insects", "fine webs"],
+      "treatment": ["apply insecticidal soap", "wipe with neem oil"],
+      "prevention": ["regularly clean leaves", "check undersides weekly"]
+    }
+  },
+
+  "Peace Lily (Spathiphyllum wallisii)": {
+    "Wilting": {
+      "symptoms": ["entire plant droops suddenly"],
+      "treatment": ["water thoroughly until drainage occurs", "trim damaged leaves"],
+      "prevention": ["maintain consistent moisture", "do not let soil fully dry"]
+    },
+    "Brown leaf tips": {
+      "symptoms": ["crispy tips on otherwise green leaves"],
+      "treatment": ["cut tips neatly", "use distilled water"],
+      "prevention": ["avoid chlorinated water", "keep humidity above 50%"]
+    },
+    "No blooms": {
+      "symptoms": ["plant produces leaves but no flowers"],
+      "treatment": ["move to brighter indirect light", "use bloom booster fertilizer"],
+      "prevention": ["provide 10–12 hours of filtered light", "feed monthly in spring/summer"]
+    },
+    "Yellowing leaves": {
+      "symptoms": ["older leaves yellow", "slow plant growth"],
+      "treatment": ["remove old leaves", "fertilize with balanced houseplant food"],
+      "prevention": ["avoid nutrient deficiency", "use rich organic mix"]
+    },
+    "Pests": {
+      "symptoms": ["aphids, spider mites, or mealybugs visible"],
+      "treatment": ["wipe with insecticidal soap", "spray neem oil"],
+      "prevention": ["regularly clean glossy leaves", "inspect before bringing indoors"]
+    }
+  }
+},
+{
+  "ZZ Plant (Zamioculcas zamiifolia)": {
+    "Overwatering": {
+      "symptoms": ["yellowing leaves", "mushy rhizomes", "rotting smell"],
+      "treatment": ["remove rotted parts", "repot in well-draining soil", "reduce watering frequency"],
+      "prevention": ["allow soil to dry completely between waterings", "use chunky fast-draining mix"]
+    },
+    "Underwatering": {
+      "symptoms": ["wrinkled stems", "drooping leaves"],
+      "treatment": ["water thoroughly until excess drains", "maintain moderate watering schedule"],
+      "prevention": ["water once soil is fully dry", "adjust frequency with seasons"]
+    },
+    "Pests": {
+      "symptoms": ["small brown spots", "sticky residue", "webbing"],
+      "treatment": ["wipe leaves with neem oil", "use insecticidal soap spray"],
+      "prevention": ["dust leaves regularly", "inspect new plants before adding indoors"]
+    },
+    "Low Light Stress": {
+      "symptoms": ["elongated stems", "faded leaf color"],
+      "treatment": ["move to brighter indirect light"],
+      "prevention": ["keep in medium to bright indirect light conditions"]
+    }
+  },
+
+  "Cast Iron Plant (Aspidistra elatior)": {
+    "Overwatering": {
+      "symptoms": ["yellowing leaves", "root rot", "drooping"],
+      "treatment": ["cut affected roots", "repot in fresh soil", "improve drainage"],
+      "prevention": ["use well-draining soil", "water when topsoil dries out"]
+    },
+    "Underwatering": {
+      "symptoms": ["crispy brown leaf tips", "wilted appearance"],
+      "treatment": ["increase watering gradually", "soak soil deeply"],
+      "prevention": ["keep soil evenly moist", "reduce stress from neglect"]
+    },
+    "Leaf Spot Disease": {
+      "symptoms": ["brown patches", "yellow halo around spots"],
+      "treatment": ["remove infected leaves", "apply fungicide if severe"],
+      "prevention": ["avoid wetting foliage", "provide airflow around plant"]
+    },
+    "Low Humidity": {
+      "symptoms": ["browning tips", "curling edges"],
+      "treatment": ["mist occasionally", "use humidity tray"],
+      "prevention": ["place in naturally humid room", "group with other plants"]
+    }
+  },
+
+  "Elephant Ear Plant (Alocasia macrorrhizos)": {
+    "Overwatering": {
+      "symptoms": ["yellow leaves", "soft roots", "droopy stems"],
+      "treatment": ["remove rotted parts", "repot in fast-draining soil"],
+      "prevention": ["water only when top 2 inches dry", "ensure pot has drainage"]
+    },
+    "Underwatering": {
+      "symptoms": ["crispy brown edges", "drooping large leaves"],
+      "treatment": ["water deeply until runoff", "increase frequency slightly"],
+      "prevention": ["maintain evenly moist soil", "avoid letting soil fully dry"]
+    },
+    "Pests": {
+      "symptoms": ["holes in leaves", "sticky residue", "tiny moving insects"],
+      "treatment": ["use neem oil spray", "wipe leaves weekly"],
+      "prevention": ["inspect underside of leaves", "quarantine new plants"]
+    },
+    "Leaf Burn": {
+      "symptoms": ["scorched leaf patches", "crispy edges"],
+      "treatment": ["remove damaged leaves", "move away from direct sun"],
+      "prevention": ["provide bright but indirect light"]
+    }
+  },
+
+  "Calathea / Prayer Plant (Calathea orbifolia)": {
+    "Overwatering": {
+      "symptoms": ["yellowing leaves", "root rot", "drooping"],
+      "treatment": ["trim rotted roots", "repot in fresh soil", "reduce watering"],
+      "prevention": ["keep soil moist but not soggy", "use airy well-draining soil"]
+    },
+    "Underwatering": {
+      "symptoms": ["crispy edges", "wilting", "curling leaves"],
+      "treatment": ["bottom-water plant", "increase frequency slightly"],
+      "prevention": ["maintain evenly moist soil", "check topsoil regularly"]
+    },
+    "Low Humidity": {
+      "symptoms": ["brown crispy leaf tips", "curling"],
+      "treatment": ["mist plant", "place on humidity tray", "use humidifier"],
+      "prevention": ["keep humidity above 50%", "avoid placing near AC/heater"]
+    },
+    "Pests": {
+      "symptoms": ["fine webbing", "speckled leaves", "sticky residue"],
+      "treatment": ["spray with insecticidal soap", "wipe leaves with neem oil"],
+      "prevention": ["inspect weekly", "maintain high humidity to deter spider mites"]
+    },
+    "Leaf Pattern Fading": {
+      "symptoms": ["dull or faded leaf stripes"],
+      "treatment": ["move to brighter indirect light"],
+      "prevention": ["place in medium to bright indirect light, never direct sun"]
+    }
+  },
+  "Anthurium (Anthurium andraeanum)": {
+    "Overwatering": {
+      "symptoms": ["yellowing leaves", "root rot"],
+      "treatment": ["let soil dry", "repot in well-draining mix"],
+      "prevention": ["allow topsoil to dry before watering"]
+    },
+    "Low Humidity": {
+      "symptoms": ["brown leaf edges", "dry leaf tips"],
+      "treatment": ["increase humidity with pebble tray or humidifier"],
+      "prevention": ["maintain 60-80% humidity"]
+    },
+    "Pests (Mealybugs/Aphids/Spider Mites)": {
+      "symptoms": ["sticky residue", "tiny crawling insects"],
+      "treatment": ["wipe leaves with neem oil", "use insecticidal soap"],
+      "prevention": ["inspect plants regularly"]
+    }
+  },
+  "Gerbera Daisy (Gerbera jamesonii)": {
+    "Overwatering": {
+      "symptoms": ["yellow leaves", "root rot smell"],
+      "treatment": ["improve drainage", "let soil dry"],
+      "prevention": ["avoid soggy soil"]
+    },
+    "Powdery Mildew": {
+      "symptoms": ["white powdery coating on leaves"],
+      "treatment": ["remove infected leaves", "apply fungicide"],
+      "prevention": ["provide good air circulation"]
+    },
+    "Aphids/Whiteflies": {
+      "symptoms": ["curled leaves", "sticky residue"],
+      "treatment": ["spray neem oil", "wash leaves with water"],
+      "prevention": ["regularly inspect plants"]
+    }
+  },
+  "Chrysanthemum (Chrysanthemum morifolium)": {
+    "Overwatering": {
+      "symptoms": ["wilting despite wet soil", "yellowing leaves"],
+      "treatment": ["repot with fresh soil", "reduce watering"],
+      "prevention": ["ensure pot drainage"]
+    },
+    "Leaf Spot (Fungal)": {
+      "symptoms": ["brown or black spots on leaves"],
+      "treatment": ["remove affected leaves", "apply fungicide"],
+      "prevention": ["avoid overhead watering"]
+    },
+    "Aphids/Spider Mites": {
+      "symptoms": ["tiny webs", "distorted new growth"],
+      "treatment": ["use insecticidal soap", "neem oil spray"],
+      "prevention": ["keep humidity stable"]
+    }
+  },
+  "Kalanchoe (Kalanchoe blossfeldiana)": {
+    "Overwatering": {
+      "symptoms": ["soft mushy stems", "yellow leaves"],
+      "treatment": ["cut away rotten parts", "repot in dry soil"],
+      "prevention": ["water only when top 2 inches are dry"]
+    },
+    "Powdery Mildew": {
+      "symptoms": ["white fuzzy spots on leaves"],
+      "treatment": ["remove infected leaves", "apply sulfur spray"],
+      "prevention": ["avoid overcrowding plants"]
+    },
+    "Aphids/Mealybugs": {
+      "symptoms": ["sticky residue", "clusters on stems"],
+      "treatment": ["dab with alcohol cotton", "use neem oil"],
+      "prevention": ["inspect regularly"]
+    }
+  },
+  "Hibiscus (Hibiscus rosa-sinensis)": {
+    "Overwatering": {
+      "symptoms": ["yellow leaves", "leaf drop"],
+      "treatment": ["improve soil drainage", "repot if necessary"],
+      "prevention": ["let soil dry slightly between watering"]
+    },
+    "Aphids/Whiteflies": {
+      "symptoms": ["distorted leaves", "sticky honeydew"],
+      "treatment": ["spray with neem oil", "wash off with water"],
+      "prevention": ["check undersides of leaves frequently"]
+    },
+    "Nutrient Deficiency (Iron/Phosphorus)": {
+      "symptoms": ["yellowing between veins", "poor flowering"],
+      "treatment": ["apply balanced fertilizer", "use iron supplement"],
+      "prevention": ["maintain fertilization schedule"]
+    }
+  },
+  "Holy Basil (Ocimum tenuiflorum)": {
+    "Overwatering": {
+      "symptoms": ["yellowing leaves", "root rot smell"],
+      "treatment": ["reduce watering", "let soil dry out"],
+      "prevention": ["check soil before watering"]
+    },
+    "Leaf Spot (Fungal)": {
+      "symptoms": ["brown/black circular spots"],
+      "treatment": ["remove affected leaves", "apply organic fungicide"],
+      "prevention": ["avoid overhead watering"]
+    },
+    "Aphids/Whiteflies": {
+      "symptoms": ["sticky residue", "tiny white insects"],
+      "treatment": ["use neem oil spray", "wash with water"],
+      "prevention": ["inspect leaves regularly"]
+    }
+  },
+  "Mint (Mentha arvensis)": {
+    "Overwatering": {
+      "symptoms": ["drooping stems", "yellow leaves"],
+      "treatment": ["allow soil to dry", "repot if root rot present"],
+      "prevention": ["ensure pot has drainage holes"]
+    },
+    "Powdery Mildew": {
+      "symptoms": ["white powdery film on leaves"],
+      "treatment": ["prune affected leaves", "use sulfur fungicide"],
+      "prevention": ["provide airflow around plants"]
+    },
+    "Spider Mites/Aphids": {
+      "symptoms": ["tiny webs", "curled leaves"],
+      "treatment": ["spray with insecticidal soap"],
+      "prevention": ["regularly mist leaves"]
+    }
+  },
+  "Coriander (Coriandrum sativum)": {
+    "Overwatering": {
+      "symptoms": ["wilting", "yellow leaves"],
+      "treatment": ["improve soil drainage", "water less often"],
+      "prevention": ["check soil moisture before watering"]
+    },
+    "Bolting (Premature Flowering)": {
+      "symptoms": ["tall thin stems", "early flowers"],
+      "treatment": ["harvest leaves promptly", "provide cooler conditions"],
+      "prevention": ["avoid heat stress"]
+    },
+    "Aphids": {
+      "symptoms": ["sticky residue", "leaf curling"],
+      "treatment": ["use neem oil", "introduce ladybugs if outdoors"],
+      "prevention": ["regularly inspect plants"]
+    }
+  },
+  "Lemongrass (Cymbopogon citratus)": {
+    "Overwatering": {
+      "symptoms": ["yellowing leaves", "base rot"],
+      "treatment": ["reduce watering", "repot with sandy soil"],
+      "prevention": ["use well-draining soil"]
+    },
+    "Rust (Fungal Disease)": {
+      "symptoms": ["orange pustules on leaves"],
+      "treatment": ["remove infected leaves", "apply fungicide"],
+      "prevention": ["avoid wetting foliage"]
+    },
+    "Pests (Aphids/Grasshoppers)": {
+      "symptoms": ["chewed leaves", "sticky residue"],
+      "treatment": ["spray neem oil"],
+      "prevention": ["regularly monitor plants"]
+    }
+  },
+  "Curry Leaf Plant (Murraya koenigii)": {
+    "Overwatering": {
+      "symptoms": ["yellow leaves", "root decay"],
+      "treatment": ["repot with dry soil", "prune affected roots"],
+      "prevention": ["let soil dry between watering"]
+    },
+    "Leaf Spot (Fungal)": {
+      "symptoms": ["dark lesions on leaves"],
+      "treatment": ["remove affected leaves", "apply fungicide"],
+      "prevention": ["avoid overhead watering"]
+    },
+    "Aphids/Scale Insects": {
+      "symptoms": ["sticky residue", "clusters on leaves"],
+      "treatment": ["wipe leaves with neem solution"],
+      "prevention": ["inspect plants regularly"]
+    }
+  },
+  "Spider Plant (Chlorophytum comosum)": {
+    "Overwatering": {
+      "symptoms": ["yellow leaf tips", "root rot"],
+      "treatment": ["reduce watering", "repot with dry soil"],
+      "prevention": ["use well-draining soil"]
+    },
+    "Brown Leaf Tips": {
+      "symptoms": ["crispy brown tips"],
+      "treatment": ["trim damaged tips"],
+      "prevention": ["use distilled or filtered water"]
+    },
+    "Pests (Aphids/Spider Mites)": {
+      "symptoms": ["tiny webs", "sticky leaves"],
+      "treatment": ["wipe leaves", "apply neem oil"],
+      "prevention": ["mist leaves occasionally"]
+    }
+  },
+  "English Ivy (Hedera helix)": {
+    "Overwatering": {
+      "symptoms": ["yellow leaves", "root rot"],
+      "treatment": ["improve drainage", "let soil dry"],
+      "prevention": ["check moisture before watering"]
+    },
+    "Spider Mites": {
+      "symptoms": ["webbing under leaves", "yellow speckles"],
+      "treatment": ["increase humidity", "use insecticidal soap"],
+      "prevention": ["mist leaves regularly"]
+    },
+    "Leaf Spot (Bacterial/Fungal)": {
+      "symptoms": ["brown spots on leaves"],
+      "treatment": ["remove infected leaves", "apply fungicide"],
+      "prevention": ["avoid overhead watering"]
+    }
+  },
+  "Boston Fern (Nephrolepis exaltata)": {
+    "Overwatering": {
+      "symptoms": ["wilting fronds", "soggy soil"],
+      "treatment": ["allow soil to dry", "repot if necessary"],
+      "prevention": ["ensure good drainage"]
+    },
+    "Low Humidity": {
+      "symptoms": ["brown crispy fronds"],
+      "treatment": ["mist daily", "use humidifier"],
+      "prevention": ["maintain high humidity (50-70%)"]
+    },
+    "Pests (Spider Mites/Mealybugs)": {
+      "symptoms": ["tiny webbing", "white cottony patches"],
+      "treatment": ["wash fronds with water", "apply neem oil"],
+      "prevention": ["inspect regularly"]
+    }
+  },
+  "Bird’s Nest Fern (Asplenium nidus)": {
+    "Overwatering": {
+      "symptoms": ["yellow fronds", "rot at base"],
+      "treatment": ["reduce watering", "repot if necessary"],
+      "prevention": ["water only when topsoil is dry"]
+    },
+    "Leaf Browning": {
+      "symptoms": ["brown frond edges"],
+      "treatment": ["trim damaged fronds"],
+      "prevention": ["increase humidity and avoid direct sun"]
+    },
+    "Pests (Scale/Mealybugs)": {
+      "symptoms": ["white or brown bumps on fronds"],
+      "treatment": ["wipe with alcohol cotton", "apply neem oil"],
+      "prevention": ["inspect leaves frequently"]
+    }
+  },
+  "Rubber Plant (Ficus elastica)": {
+    "Overwatering": {
+      "symptoms": ["yellow lower leaves", "soft roots"],
+      "treatment": ["repot with fresh soil", "prune rotted roots"],
+      "prevention": ["let soil dry halfway before watering"]
+    },
+    "Leaf Drop (Low Light/Stress)": {
+      "symptoms": ["falling leaves", "bare stems"],
+      "treatment": ["move to brighter spot", "avoid sudden moves"],
+      "prevention": ["provide stable environment"]
+    },
+    "Pests (Spider Mites/Scale)": {
+      "symptoms": ["tiny webs", "sticky residue"],
+      "treatment": ["wipe with neem oil", "spray insecticidal soap"],
+      "prevention": ["clean leaves regularly"]
+    }
+  },
+  "Fiddle Leaf Fig (Ficus lyrata)": {
+    "Overwatering": {
+      "symptoms": ["brown spots on leaves", "dropping leaves"],
+      "treatment": ["repot in well-draining soil", "reduce watering"],
+      "prevention": ["let topsoil dry between watering"]
+    },
+    "Low Humidity": {
+      "symptoms": ["crispy edges", "leaf browning"],
+      "treatment": ["use humidifier", "mist leaves"],
+      "prevention": ["maintain humidity 40-60%"]
+    },
+    "Pests (Spider Mites/Scale)": {
+      "symptoms": ["tiny speckles", "sticky leaves"],
+      "treatment": ["wipe with neem oil", "spray insecticidal soap"],
+      "prevention": ["inspect regularly"]
+    }
+  },
+  "Weeping Fig (Ficus benjamina)": {
+    "Overwatering": {
+      "symptoms": ["leaf drop", "yellow leaves"],
+      "treatment": ["repot with dry soil", "reduce watering"],
+      "prevention": ["check moisture before watering"]
+    },
+    "Sudden Leaf Drop (Stress)": {
+      "symptoms": ["sudden loss of leaves"],
+      "treatment": ["move to stable light/humidity", "avoid drafts"],
+      "prevention": ["maintain stable environment"]
+    },
+    "Pests (Scale/Mealybugs)": {
+      "symptoms": ["brown bumps", "sticky residue"],
+      "treatment": ["apply neem oil", "wipe leaves"],
+      "prevention": ["inspect frequently"]
+    }
+  },
+  "Croton (Codiaeum variegatum)": {
+    "Overwatering": {
+      "symptoms": ["wilting leaves", "yellowing"],
+      "treatment": ["reduce watering", "improve drainage"],
+      "prevention": ["use well-draining soil"]
+    },
+    "Low Humidity/Cold Stress": {
+      "symptoms": ["leaf drop", "dull colors"],
+      "treatment": ["increase humidity", "avoid cold drafts"],
+      "prevention": ["keep temperature stable"]
+    },
+    "Spider Mites/Scale": {
+      "symptoms": ["speckled leaves", "sticky residue"],
+      "treatment": ["wipe with neem oil", "spray insecticidal soap"],
+      "prevention": ["clean leaves regularly"]
+    }
+  },
+  "Coleus (Plectranthus scutellarioides)": {
+    "Overwatering": {
+      "symptoms": ["root rot", "drooping leaves"],
+      "treatment": ["repot in dry soil", "prune damaged roots"],
+      "prevention": ["allow soil to dry before watering"]
+    },
+    "Powdery Mildew": {
+      "symptoms": ["white coating on leaves"],
+      "treatment": ["remove infected leaves", "apply fungicide"],
+      "prevention": ["provide airflow"]
+    },
+    "Aphids/Whiteflies": {
+      "symptoms": ["sticky residue", "curled leaves"],
+      "treatment": ["neem oil spray", "wash with water"],
+      "prevention": ["inspect plants regularly"]
+    }
+  },
+  "Arrowhead Plant (Syngonium podophyllum)": {
+    "Overwatering": {
+      "symptoms": ["yellowing leaves", "root rot"],
+      "treatment": ["repot in dry soil", "prune rotten roots"],
+      "prevention": ["allow soil to dry before watering"]
+    },
+    "Low Light Stress": {
+      "symptoms": ["leggy growth", "pale leaves"],
+      "treatment": ["move to brighter location"],
+      "prevention": ["provide bright indirect light"]
+    },
+    "Pests (Aphids/Mealybugs)": {
+      "symptoms": ["sticky residue", "tiny insects"],
+      "treatment": ["wipe with neem oil", "apply insecticidal soap"],
+      "prevention": ["inspect new plants"]
+    }
+  },
+  "Wax Plant (Hoya carnosa)": {
+    "Overwatering": {
+      "symptoms": ["yellow leaves", "root rot"],
+      "treatment": ["reduce watering", "repot in dry soil"],
+      "prevention": ["allow topsoil to dry before watering"]
+    },
+    "Low Light Stress": {
+      "symptoms": ["slow growth", "few flowers"],
+      "treatment": ["move to brighter spot"],
+      "prevention": ["provide indirect bright light"]
+    },
+    "Mealybugs/Scale": {
+      "symptoms": ["white cottony clusters", "sticky leaves"],
+      "treatment": ["wipe with alcohol cotton", "use neem oil"],
+      "prevention": ["regular inspections"]
+    }
+  },
+  "Aloe Aristata (Aristaloe aristata)": {
+    "Overwatering": {
+      "symptoms": ["soft mushy leaves", "root rot"],
+      "treatment": ["repot in dry cactus mix", "remove damaged roots"],
+      "prevention": ["water sparingly"]
+    },
+    "Sunburn": {
+      "symptoms": ["brown dry patches"],
+      "treatment": ["move to filtered sunlight"],
+      "prevention": ["avoid intense direct sunlight"]
+    },
+    "Pests (Mealybugs/Scale)": {
+      "symptoms": ["white clusters", "sticky leaves"],
+      "treatment": ["dab with alcohol cotton", "spray neem oil"],
+      "prevention": ["inspect plants frequently"]
+    }
+  },
+  "Oxalis / Purple Shamrock (Oxalis triangularis)": {
+    "Overwatering": {
+      "symptoms": ["yellow drooping leaves", "root rot"],
+      "treatment": ["let soil dry", "repot if necessary"],
+      "prevention": ["use well-draining soil"]
+    },
+    "Dormancy Stress": {
+      "symptoms": ["sudden leaf drop", "plant seems dead"],
+      "treatment": ["stop watering", "let bulbs rest for weeks"],
+      "prevention": ["allow natural dormancy cycle"]
+    },
+    "Pests (Aphids/Spider Mites)": {
+      "symptoms": ["tiny insects on leaves", "yellow speckles"],
+      "treatment": ["spray neem oil", "wipe leaves"],
+      "prevention": ["inspect plants regularly"]
+    }
+  },
+  "Lucky Bamboo (Dracaena sanderiana)": {
+    "Overwatering / Stagnant Water": {
+      "symptoms": ["yellow stems", "foul smell", "root rot"],
+      "treatment": ["change water", "trim rotten roots"],
+      "prevention": ["replace water weekly", "use filtered water"]
+    },
+    "Low Light Stress": {
+      "symptoms": ["leggy pale stems"],
+      "treatment": ["move to brighter indirect light"],
+      "prevention": ["provide medium indoor light"]
+    },
+    "Algae Growth in Water": {
+      "symptoms": ["green slimy film in container"],
+      "treatment": ["clean container", "refresh water"],
+      "prevention": ["use opaque container"]
+    },
+    "Pests (Mealybugs, Aphids)": {
+      "symptoms": ["sticky residue", "white clusters"],
+      "treatment": ["wipe with alcohol", "spray neem oil"],
+      "prevention": ["inspect stalks regularly"]
+    }
+  },
+  "Begonia (Rex Begonia) (Begonia rex-cultorum)": {
+    "Overwatering": {
+      "symptoms": ["wilting despite wet soil", "root rot"],
+      "treatment": ["repot in drier soil", "remove damaged roots"],
+      "prevention": ["allow soil surface to dry before watering"]
+    },
+    "Powdery Mildew": {
+      "symptoms": ["white powdery coating on leaves"],
+      "treatment": ["apply fungicide", "remove affected leaves"],
+      "prevention": ["increase air circulation"]
+    },
+    "Leaf Scorch (Direct Sunburn)": {
+      "symptoms": ["crispy brown leaf edges", "faded colors"],
+      "treatment": ["move to indirect light"],
+      "prevention": ["avoid direct sunlight indoors"]
+    },
+    "Pests (Spider Mites, Mealybugs, Fungus Gnats)": {
+      "symptoms": ["tiny webs", "white cottony patches", "gnats around soil"],
+      "treatment": ["wipe leaves with neem oil", "dry topsoil to control gnats"],
+      "prevention": ["avoid soggy soil", "inspect regularly"]
+    }
+  }
+}
+]
