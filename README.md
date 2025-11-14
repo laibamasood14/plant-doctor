@@ -421,9 +421,6 @@ The analyze_leaf_image_base64 method follows these steps:
 ## 🤝 Contributing & Development
 
 ### Development Setup
-**Fork and clone the repository:**
-- Commands: git clone https://github.com/your-username/leaf-diseases-detect.git, cd leaf-diseases-detect/Front
-
 **Create development environment:**
 - Commands: python -m venv dev-env, .\dev-env\Scripts\Activate.ps1
 
@@ -486,13 +483,7 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 - **Streamlit**: Interactive web application framework
 - **Python Ecosystem**: NumPy, Pillow, and other supporting libraries
 
-## 📞 Support & Community
 
-### Getting Help
-- **📚 Documentation**: Complete guides in this README
-- **🐛 Bug Reports**: [GitHub Issues](https://github.com/shukur-alom/leaf-diseases-detect/issues)
-- **💡 Feature Requests**: [GitHub Discussions](https://github.com/shukur-alom/leaf-diseases-detect/discussions)
-- **👥 Community**: Join our developer community for collaboration
 
 ### Professional Support
 - **Commercial Licensing**: Contact for enterprise deployment options
