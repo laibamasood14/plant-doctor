@@ -72,9 +72,6 @@ The **DiseaseAnalysisResult DataClass** serves as a structured container for dis
 - **Git** for repository cloning
 
 ### 1. Repository Setup
-**Clone the repository:**
-- Run: git clone https://github.com/shukur-alom/leaf-diseases-detect.git
-- Navigate to: cd leaf-diseases-detect/Front
 
 **Create and activate virtual environment (recommended):**
 - Windows PowerShell: python -m venv venv then .\venv\Scripts\Activate.ps1
