@@ -13,6 +13,11 @@ import sys
 import logging
 from typing import Dict, Any, Optional
 from pathlib import Path
+from dotenv import load_dotenv
+import statistics
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Add parent directory to path for imports
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -30,17 +35,32 @@ class PlantDiagnosisPipeline:
     disease detection, and knowledge base recommendations.
     """
     
-    def __init__(self, roboflow_api_key: Optional[str] = None, groq_api_key: Optional[str] = None):
+    def __init__(
+        self, 
+        roboflow_api_key: Optional[str] = None, 
+        groq_api_key: Optional[str] = None,
+        confidence_method: str = "adaptive_weighted"
+    ):
         """
         Initialize the plant diagnosis pipeline.
         
         Args:
             roboflow_api_key (Optional[str]): Roboflow API key for plant classification
             groq_api_key (Optional[str]): Groq API key for disease detection
+            confidence_method (str): Method for calculating overall confidence:
+                                   - "adaptive_weighted": Weighted average with adaptive weights
+                                   - "statistical": Statistical analysis of all scores
+                                   - "simple_average": Simple average of all scores
         """
         try:
-            # Initialize Roboflow client for plant classification
-            self.roboflow_client = RoboflowInferenceClient(api_key=roboflow_api_key)
+            # Initialize Roboflow client for plant classification with workflow
+            self.roboflow_client = RoboflowInferenceClient(
+                api_key=roboflow_api_key,
+                workspace_name="laiba-masood-tyq7q",
+                model_id="identify-plant-zvd1y/1",
+                min_confidence=0.7,
+                confidence_method="adaptive"
+            )
             logger.info("Roboflow client initialized")
             
             # Initialize Groq client for disease detection
@@ -51,9 +71,103 @@ class PlantDiagnosisPipeline:
             self.knowledge_base = PlantKnowledgeBase()
             logger.info("Knowledge base initialized")
             
+            self.confidence_method = confidence_method
+            
         except Exception as e:
             logger.error(f"Failed to initialize diagnosis pipeline: {str(e)}")
             raise
+    
+    def _calculate_overall_confidence(
+        self,
+        classification_conf: float,
+        disease_conf: float,
+        kb_conf: float,
+        classification_success: bool,
+        disease_success: bool,
+        kb_success: bool
+    ) -> float:
+        """
+        Calculate overall confidence using advanced methods.
+        
+        Args:
+            classification_conf: Classification confidence (0-1)
+            disease_conf: Disease detection confidence (0-100, will be normalized)
+            kb_conf: Knowledge base confidence (0-1)
+            classification_success: Whether classification succeeded
+            disease_success: Whether disease detection succeeded
+            kb_success: Whether KB lookup succeeded
+            
+        Returns:
+            float: Overall confidence score (0-1)
+        """
+        # Normalize disease confidence from 0-100 to 0-1
+        disease_conf_normalized = disease_conf / 100.0 if disease_conf > 1.0 else disease_conf
+        
+        # Collect all available confidences
+        confidences = []
+        weights = []
+        
+        if classification_success:
+            confidences.append(classification_conf)
+            weights.append(0.4)  # Classification is most important
+        
+        if disease_success:
+            confidences.append(disease_conf_normalized)
+            weights.append(0.4)  # Disease detection is equally important
+        
+        if kb_success:
+            confidences.append(kb_conf)
+            weights.append(0.2)  # KB lookup is supplementary
+        
+        if not confidences:
+            return 0.0
+        
+        # Normalize weights
+        total_weight = sum(weights)
+        if total_weight > 0:
+            weights = [w / total_weight for w in weights]
+        
+        if self.confidence_method == "adaptive_weighted":
+            # Adaptive weighted: Adjust weights based on confidence levels
+            # If a stage has very high confidence, increase its weight
+            adjusted_weights = []
+            for conf, weight in zip(confidences, weights):
+                # Boost weight if confidence is high (>0.8)
+                if conf > 0.8:
+                    adjusted_weights.append(weight * 1.2)
+                # Reduce weight if confidence is low (<0.5)
+                elif conf < 0.5:
+                    adjusted_weights.append(weight * 0.7)
+                else:
+                    adjusted_weights.append(weight)
+            
+            # Normalize adjusted weights
+            total_adjusted = sum(adjusted_weights)
+            if total_adjusted > 0:
+                adjusted_weights = [w / total_adjusted for w in adjusted_weights]
+            
+            overall = sum(conf * weight for conf, weight in zip(confidences, adjusted_weights))
+            
+        elif self.confidence_method == "statistical":
+            # Statistical: Use mean and standard deviation
+            mean_conf = statistics.mean(confidences)
+            if len(confidences) >= 2:
+                std_conf = statistics.stdev(confidences)
+                # If all confidences are close (low std), trust the mean more
+                # If they vary a lot, use weighted average
+                if std_conf < 0.15:  # Low variance - high agreement
+                    overall = mean_conf * 1.1  # Boost slightly
+                else:  # High variance - use weighted average
+                    overall = sum(conf * weight for conf, weight in zip(confidences, weights))
+            else:
+                overall = mean_conf
+        
+        else:  # simple_average
+            # Simple weighted average
+            overall = sum(conf * weight for conf, weight in zip(confidences, weights))
+        
+        # Ensure result is between 0 and 1
+        return max(0.0, min(1.0, overall))
     
     def diagnose_plant(self, image_path: str) -> Dict[str, Any]:
         """
@@ -75,7 +189,7 @@ class PlantDiagnosisPipeline:
                 - disease_info: Disease detection results
                 - kb_advice: Knowledge base recommendations
                 - treatments: Treatment recommendations
-                - confidence: Overall confidence score
+                - confidence: Overall confidence score with advanced calculation
                 - pipeline_success: Boolean indicating success
         """
         try:
@@ -106,10 +220,14 @@ class PlantDiagnosisPipeline:
                 base64_image = image_path
             
             disease_result = self.disease_detector.analyze_leaf_image_base64(base64_image)
+            disease_confidence = disease_result.get("confidence", 0.0)
+            disease_success = disease_result.get("disease_detected") is not None and disease_result.get("disease_type") != "invalid_image"
             
             # Step 3: Knowledge Base Lookup
             logger.info("Step 3: Looking up plant care information...")
             kb_info = self.knowledge_base.get_plant_care_info(plant_name)
+            kb_confidence = kb_info.get("confidence", 0.0)
+            kb_success = kb_info.get("found", False)
             
             # Step 4: Get Treatment Recommendations
             treatment_recommendations = []
@@ -123,7 +241,17 @@ class PlantDiagnosisPipeline:
             if not treatment_recommendations:
                 treatment_recommendations = self.knowledge_base.get_treatment_recommendations(plant_name)
             
-            # Step 5: Compile Results
+            # Step 5: Calculate Advanced Overall Confidence
+            overall_confidence = self._calculate_overall_confidence(
+                classification_confidence,
+                disease_confidence,
+                kb_confidence,
+                classification_success,
+                disease_success,
+                kb_success
+            )
+            
+            # Step 6: Compile Results
             diagnosis_result = {
                 "plant_name": plant_name,
                 "health_status": "unhealthy" if disease_result.get("disease_detected", False) else "healthy",
@@ -132,17 +260,19 @@ class PlantDiagnosisPipeline:
                     "disease_name": disease_result.get("disease_name"),
                     "disease_type": disease_result.get("disease_type"),
                     "severity": disease_result.get("severity"),
-                    "confidence": disease_result.get("confidence"),
+                    "confidence": disease_confidence,
                     "symptoms": disease_result.get("symptoms", []),
                     "possible_causes": disease_result.get("possible_causes", [])
                 },
                 "classification_info": {
                     "plant_identified": classification_success,
                     "classification_confidence": classification_confidence,
-                    "roboflow_predictions": classification_result.get("predictions", [])
+                    "roboflow_predictions": classification_result.get("predictions", []),
+                    "confidence_method": classification_result.get("confidence_method", "unknown")
                 },
                 "kb_advice": {
-                    "plant_found_in_kb": kb_info.get("found", False),
+                    "plant_found_in_kb": kb_success,
+                    "kb_confidence": kb_confidence,
                     "general_care": kb_info.get("general_care", ""),
                     "common_issues": kb_info.get("common_issues", []),
                     "prevention_tips": self.knowledge_base.get_prevention_tips(plant_name)
@@ -156,14 +286,16 @@ class PlantDiagnosisPipeline:
                 },
                 "confidence": {
                     "classification": classification_confidence,
-                    "disease_detection": disease_result.get("confidence", 0.0),
-                    "overall": (classification_confidence + disease_result.get("confidence", 0.0)) / 2
+                    "disease_detection": disease_confidence / 100.0 if disease_confidence > 1.0 else disease_confidence,
+                    "knowledge_base": kb_confidence,
+                    "overall": overall_confidence,
+                    "calculation_method": self.confidence_method
                 },
-                "pipeline_success": classification_success and True,  # Disease detection can fail but pipeline continues
+                "pipeline_success": classification_success or disease_success or kb_success,
                 "timestamp": disease_result.get("analysis_timestamp", "")
             }
             
-            logger.info("Plant diagnosis pipeline completed successfully")
+            logger.info(f"Plant diagnosis pipeline completed successfully (overall confidence: {overall_confidence:.2f})")
             return diagnosis_result
             
         except Exception as e:
@@ -230,6 +362,7 @@ def main():
             result = pipeline.diagnose_plant(test_image)
             print(f"Plant: {result['plant_name']}")
             print(f"Health: {result['health_status']}")
+            print(f"Overall Confidence: {result['confidence']['overall']:.2%}")
             print(f"Success: {result['pipeline_success']}")
         
     except Exception as e:

@@ -426,7 +426,12 @@ def safe_diagnose(base64_image: str) -> Dict:
     try:
         from inference import RoboflowInferenceClient
         
-        roboflow_client = RoboflowInferenceClient(model_id="identify-plant/1")
+        roboflow_client = RoboflowInferenceClient(
+            workspace_name="laiba-masood-tyq7q",
+            model_id="identify-plant-zvd1y/1",
+            min_confidence=0.7,
+            confidence_method="adaptive"
+        )
         classification_result = roboflow_client.classify_plant_from_base64(base64_image)
         
         if classification_result.get("success", False):
@@ -439,8 +444,28 @@ def safe_diagnose(base64_image: str) -> Dict:
             
             logger.info(f"Classification successful: {result['plant_name']} (confidence: {result['confidence']['classification']:.2%})")
         else:
-            logger.warning("Roboflow classification failed, continuing with unknown plant")
-            result["classification_info"]["error"] = classification_result.get("error", "Classification failed")
+            # Get detailed error information
+            error_msg = classification_result.get("error", "Classification failed")
+            confidence = classification_result.get("confidence", 0.0)
+            plant_name = classification_result.get("plant_name", "Unknown Plant")
+            
+            # Build detailed error message
+            if confidence > 0:
+                error_msg = f"Classification confidence {confidence:.2%} below threshold. Detected: {plant_name}"
+            elif "No predictions" in error_msg or "predictions" in error_msg.lower():
+                error_msg = f"No predictions returned from Roboflow workflow. {error_msg}"
+            else:
+                error_msg = f"Classification failed: {error_msg}"
+            
+            logger.warning(f"Roboflow classification failed: {error_msg}")
+            result["classification_info"]["error"] = error_msg
+            result["classification_info"]["classification_confidence"] = confidence
+            result["classification_info"]["roboflow_predictions"] = classification_result.get("predictions", [])
+            
+            # Still set plant name if we got one, even if confidence is low
+            if plant_name != "Unknown Plant":
+                result["plant_name"] = plant_name
+                logger.info(f"Using low-confidence classification: {plant_name} (confidence: {confidence:.2%})")
             
     except Exception as e:
         logger.warning(f"Roboflow classification error: {str(e)}")
@@ -517,16 +542,64 @@ def safe_diagnose(base64_image: str) -> Dict:
     result["treatments"]["disease_treatments"] = disease_treatments
     result["treatments"]["combined_treatments"] = list(set(disease_treatments + kb_treatments))
     
-    # Calculate overall confidence
+    # Calculate overall confidence using advanced method
     classification_conf = result["confidence"]["classification"]
     disease_conf = result["confidence"]["disease_detection"]
     
-    if classification_success and disease_detection_success:
-        result["confidence"]["overall"] = (classification_conf + disease_conf) / 2
-    elif classification_success:
-        result["confidence"]["overall"] = classification_conf
-    elif disease_detection_success:
-        result["confidence"]["overall"] = disease_conf
+    # Get KB confidence if available
+    kb_conf = 0.0
+    if result["kb_advice"].get("plant_found_in_kb"):
+        # Calculate KB confidence based on match quality
+        from kb_utils import PlantKnowledgeBase
+        kb = PlantKnowledgeBase()
+        kb_info = kb.get_plant_care_info(result["plant_name"])
+        kb_conf = kb_info.get("confidence", 0.0)
+        result["kb_advice"]["kb_confidence"] = kb_conf
+    
+    # Advanced confidence calculation
+    import statistics
+    
+    confidences = []
+    weights = []
+    
+    if classification_success:
+        confidences.append(classification_conf)
+        weights.append(0.4)
+    
+    if disease_detection_success:
+        # Normalize disease confidence (0-100 to 0-1)
+        disease_conf_normalized = disease_conf / 100.0 if disease_conf > 1.0 else disease_conf
+        confidences.append(disease_conf_normalized)
+        weights.append(0.4)
+    
+    if kb_conf > 0:
+        confidences.append(kb_conf)
+        weights.append(0.2)
+    
+    if confidences:
+        # Normalize weights
+        total_weight = sum(weights)
+        if total_weight > 0:
+            weights = [w / total_weight for w in weights]
+        
+        # Adaptive weighted: Boost high confidence, reduce low confidence
+        adjusted_weights = []
+        for conf, weight in zip(confidences, weights):
+            if conf > 0.8:
+                adjusted_weights.append(weight * 1.2)
+            elif conf < 0.5:
+                adjusted_weights.append(weight * 0.7)
+            else:
+                adjusted_weights.append(weight)
+        
+        # Normalize adjusted weights
+        total_adjusted = sum(adjusted_weights)
+        if total_adjusted > 0:
+            adjusted_weights = [w / total_adjusted for w in adjusted_weights]
+        
+        overall = sum(conf * weight for conf, weight in zip(confidences, adjusted_weights))
+        result["confidence"]["overall"] = max(0.0, min(1.0, overall))
+        result["confidence"]["calculation_method"] = "adaptive_weighted"
     else:
         result["confidence"]["overall"] = 0.0
     

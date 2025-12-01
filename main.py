@@ -388,12 +388,41 @@ def display_complete_diagnosis(result):
     else:
         st.markdown('<div style="text-align: center;"><span class="status info">ℹ️ Analysis Complete</span></div>', unsafe_allow_html=True)
     
-    # Confidence score
+    # Confidence score with detailed breakdown
     confidence = result.get('confidence', {})
     overall_conf = confidence.get('overall', 0)
+    classification_conf = confidence.get('classification', 0)
+    disease_conf = confidence.get('disease_detection', 0)
+    calculation_method = confidence.get('calculation_method', 'adaptive_weighted')
+    
     if overall_conf > 0:
-        conf_percent = int(overall_conf)
-        st.markdown(f'<div style="text-align: center; margin: 1.5rem 0;"><span class="status info">🎯 Analysis Confidence: {conf_percent}%</span></div>', unsafe_allow_html=True)
+        # Convert to percentage (0-1 to 0-100)
+        overall_percent = overall_conf * 100 if overall_conf <= 1.0 else overall_conf
+        classification_percent = classification_conf * 100 if classification_conf <= 1.0 else classification_conf
+        disease_percent = disease_conf * 100 if disease_conf <= 1.0 else disease_conf
+        
+        # Display overall confidence with method
+        st.markdown(
+            f'<div style="text-align: center; margin: 1.5rem 0;">'
+            f'<span class="status info">🎯 Overall Confidence: {overall_percent:.1f}%</span>'
+            f'<br><small style="color: #6b7280; font-size: 0.9rem;">(Method: {calculation_method.replace("_", " ").title()})</small>'
+            f'</div>', 
+            unsafe_allow_html=True
+        )
+        
+        # Show detailed confidence breakdown
+        conf_breakdown = '<div class="section-header">📊 Confidence Breakdown</div><div class="info-box">'
+        if classification_conf > 0:
+            conf_breakdown += f'<p><strong>🌿 Plant Classification:</strong> {classification_percent:.1f}%</p>'
+        if disease_conf > 0:
+            conf_breakdown += f'<p><strong>🦠 Disease Detection:</strong> {disease_percent:.1f}%</p>'
+        # Check both possible locations for KB confidence
+        kb_conf = confidence.get('kb_confidence', 0) or result.get('kb_advice', {}).get('kb_confidence', 0)
+        if kb_conf > 0:
+            kb_percent = kb_conf * 100 if kb_conf <= 1.0 else kb_conf
+            conf_breakdown += f'<p><strong>📚 Knowledge Base Match:</strong> {kb_percent:.1f}%</p>'
+        conf_breakdown += '</div>'
+        st.markdown(conf_breakdown, unsafe_allow_html=True)
     
     # Treatment recommendations
     treatments = result.get('treatments', {})

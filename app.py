@@ -4,7 +4,11 @@ import logging
 import os
 import sys
 from pathlib import Path
+from dotenv import load_dotenv
 from utils import convert_image_to_base64_and_test, test_with_base64_data
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Add Leaf Disease directory to path for imports
 sys.path.insert(0, str(Path(__file__).parent / "Leaf Disease"))

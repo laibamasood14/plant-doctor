@@ -3,7 +3,7 @@ groq>=0.31.0
 python-dotenv>=1.0.0
 
 # Roboflow inference SDK
-inference-sdk>=0.9.0
+inference>=0.9.0
 
 # Additional professional dependencies
 pathlib2>=2.3.7

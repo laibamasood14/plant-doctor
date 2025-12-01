@@ -45,3 +45,8 @@ venv310/
 # OS
 .DS_Store
 Thumbs.db
+
+Media/
+DEPLOYMENT_GUIDE.md
+test_api.py
+test_classification.py
